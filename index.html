@@ -1,20 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>RizoPay</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RizoPay - Home</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <h1>Welcome to RizoPay</h1>
+  <div class="top-nav">
+    <div class="brand-logo">⚡ RizoPay</div>
+    <div style="font-size: 0.85rem; color: var(--accent-gold);" id="userBalance">₹0.00</div>
+  </div>
 
-    <p>Earn 6% on every order.</p>
+  <!-- Auto Slide Banner -->
+  <div class="banner-container">
+    <div class="banner-wrapper" id="bannerWrapper">
+      <div class="banner-slide">
+        <h3>Earn 6% Daily</h3>
+        <p>Maximize profit yields on every completed order instantly.</p>
+      </div>
+      <div class="banner-slide">
+        <h3>Invite & Earn</h3>
+        <p>Get ₹120 instant team bonus plus 2% tier commissions.</p>
+      </div>
+      <div class="banner-slide">
+        <h3>Newbie Reward</h3>
+        <p>Claim instant ₹250 welcome bonus upon sign up registration.</p>
+      </div>
+    </div>
+  </div>
 
-    <button>Orders</button>
+  <!-- Company Notice -->
+  <div class="notice-bar">
+    📢 Notice: Instant UTR deposit approvals are currently active 24/7.
+  </div>
 
-    <button>Team</button>
+  <!-- Stats Grid -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="lbl">Total Users</div>
+      <div class="val">14,280+</div>
+    </div>
+    <div class="stat-card">
+      <div class="lbl">Total Revenue</div>
+      <div class="val">₹8.4M</div>
+    </div>
+    <div class="stat-card">
+      <div class="lbl">Today's Income</div>
+      <div class="val">₹126.50</div>
+    </div>
+  </div>
 
-    <button>Mine</button>
+  <!-- Quick Action Auth/Welcome -->
+  <div class="card">
+    <h3 style="margin-bottom: 8px;">Welcome to RizoPay</h3>
+    <p style="font-size: 0.85rem; color: var(--text-sub); margin-bottom: 12px;">Mobile Fintech automated income generation platform.</p>
+    <button class="btn-primary" onclick="location.href='orders.html'">Start Earning Now</button>
+  </div>
 
+  <!-- Bottom Navigation Bar -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item active">🏠<span>Home</span></a>
+    <a href="orders.html" class="nav-item">📈<span>Orders</span></a>
+    <a href="team.html" class="nav-item">👥<span>Team</span></a>
+    <a href="mine.html" class="nav-item">👤<span>Mine</span></a>
+  </nav>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
