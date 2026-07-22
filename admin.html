@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RizoPay - Admin Panel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="top-nav" style="background: #1e102a;">
+    <div class="brand-logo" style="color: var(--accent-red);">⚙️ Admin Panel</div>
+  </div>
+
+  <div style="padding: 16px;">
+    <!-- Stats Overview -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="lbl">Users</div>
+        <div class="val">1,240</div>
+      </div>
+      <div class="stat-card">
+        <div class="lbl">Pending UTR</div>
+        <div class="val" style="color: var(--accent-gold);">5</div>
+      </div>
+      <div class="stat-card">
+        <div class="lbl">Withdrawals</div>
+        <div class="val" style="color: var(--accent-red);">2</div>
+      </div>
+    </div>
+
+    <!-- User Management -->
+    <div class="card">
+      <h4>User Management</h4>
+      <input type="text" class="input-field" placeholder="Search user by Mobile/ID" style="margin-top: 8px;">
+      <div style="display: flex; gap: 8px;">
+        <button class="btn-primary" style="background: var(--accent-blue);" onclick="alert('User balance updated')">+ Add Balance</button>
+        <button class="btn-primary" style="background: var(--accent-red);" onclick="alert('User status updated')">Block User</button>
+      </div>
+    </div>
+
+    <!-- Deposit Approval -->
+    <div class="card">
+      <h4>Pending UTR Deposits</h4>
+      <div style="font-size: 0.8rem; padding: 8px 0; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <p><strong>UTR:</strong> 938201938201</p>
+          <p style="color: var(--text-sub);">Amt: ₹300 | User: RP9281</p>
+        </div>
+        <div>
+          <button style="padding: 4px 8px; background: var(--accent-green); border: none; border-radius: 4px; color: #000; font-weight: bold;" onclick="alert('Deposit Approved')">✓</button>
+          <button style="padding: 4px 8px; background: var(--accent-red); border: none; border-radius: 4px; color: #fff; font-weight: bold;" onclick="alert('Deposit Rejected')">✕</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Website Control Settings -->
+    <div class="card">
+      <h4>System Settings</h4>
+      <label style="font-size: 0.8rem; color: var(--text-sub);">Merchant UPI ID</label>
+      <input type="text" class="input-field" value="rizopay@merchantupi" style="margin-top: 4px;">
+      
+      <label style="font-size: 0.8rem; color: var(--text-sub);">Notice Bar Text</label>
+      <input type="text" class="input-field" value="Instant UTR deposit approvals are active 24/7." style="margin-top: 4px;">
+      
+      <button class="btn-primary" onclick="alert('Admin Configuration Saved')">Save Website Settings</button>
+    </div>
+  </div>
+
+</body>
+</html>
 
