@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RizoPay - Team</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="top-nav">
+    <div class="brand-logo">👥 Team Dashboard</div>
+  </div>
+
+  <div style="padding-top: 16px;">
+    <div class="card" style="background: linear-gradient(135deg, #131b2e, #1c273e);">
+      <p style="font-size: 0.8rem; color: var(--text-sub);">Referral Wallet Balance</p>
+      <h2 style="color: var(--accent-gold); margin: 6px 0;" id="refWallet">₹240.00</h2>
+      <button class="btn-primary" style="margin-top: 8px;" onclick="transferReferralWallet()">One-Click Transfer to Main Wallet</button>
+    </div>
+
+    <!-- Referral Rules Info -->
+    <div class="card">
+      <h4 style="color: var(--accent-gold); margin-bottom: 8px;">Commission Structure</h4>
+      <p style="font-size: 0.8rem; color: var(--text-sub);">• <strong>Level 1:</strong> ₹120 Bonus after deposit + 2% per order.</p>
+      <p style="font-size: 0.8rem; color: var(--text-sub); margin-top: 4px;">• <strong>Level 2:</strong> ₹50 Bonus after deposit + 1% per order.</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="lbl">Total Members</div>
+        <div class="val" id="totalTeam">8</div>
+      </div>
+      <div class="stat-card">
+        <div class="lbl">Level 1</div>
+        <div class="val">3</div>
+      </div>
+      <div class="stat-card">
+        <div class="lbl">Level 2</div>
+        <div class="val">5</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4 style="margin-bottom: 8px;">Your Invite Link</h4>
+      <input type="text" class="input-field" readonly value="https://rizopay.app/signup?ref=RZ8832" style="font-size: 0.8rem;">
+      <button class="btn-primary" onclick="navigator.clipboard.writeText('https://rizopay.app/signup?ref=RZ8832'); alert('Referral link copied!');">Copy Link</button>
+    </div>
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item">🏠<span>Home</span></a>
+    <a href="orders.html" class="nav-item">📈<span>Orders</span></a>
+    <a href="team.html" class="nav-item active">👥<span>Team</span></a>
+    <a href="mine.html" class="nav-item">👤<span>Mine</span></a>
+  </nav>
+
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('refWallet').innerText = `₹${RizoState.user.referralWallet.toFixed(2)}`;
+    });
+  </script>
+</body>
+</html>
 
