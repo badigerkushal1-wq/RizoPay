@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RizoPay - Orders</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="top-nav">
+    <div class="brand-logo">📈 Investment Plans</div>
+  </div>
+
+  <div style="padding-top: 16px;">
+    <!-- Card 1 -->
+    <div class="card">
+      <div class="order-card-header">
+        <h3>RP Token - Tier 1</h3>
+        <span class="price-tag">₹100</span>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-sub); margin-bottom: 8px;">Income Yield: <strong>6%</strong></p>
+      <p style="font-size: 0.85rem; color: var(--text-sub); margin-bottom: 16px;">Total Return Quote: <strong>₹106</strong></p>
+      <button class="btn-primary" onclick="triggerBuy(1)">Buy Plan</button>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="order-card-header">
+        <h3>RP Token - Tier 2</h3>
+        <span class="price-tag">₹300</span>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-sub); margin-bottom: 8px;">Income Yield: <strong>6%</strong></p>
+      <p style="font-size: 0.85rem; color: var(--text-sub); margin-bottom: 16px;">Total Return Quote: <strong>₹318</strong></p>
+      <button class="btn-primary" onclick="triggerBuy(2)">Buy Plan</button>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="order-card-header">
+        <h3>RP Token - Tier 3</h3>
+        <span class="price-tag">₹450</span>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-sub); margin-bottom: 8px;">Income Yield: <strong>6%</strong></p>
+      <p style="font-size: 0.85rem; color: var(--text-sub); margin-bottom: 16px;">Total Return Quote: <strong>₹477</strong></p>
+      <button class="btn-primary" onclick="triggerBuy(3)">Buy Plan</button>
+    </div>
+  </div>
+
+  <!-- Payment Modal -->
+  <div class="modal-overlay" id="paymentModal">
+    <div class="modal-content">
+      <h3>Scan & Pay ₹<span id="modalPrice">0</span></h3>
+      <div style="text-align: center; margin: 16px 0;">
+        <div style="width: 150px; height: 150px; background: #fff; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #000; font-size: 0.8rem; border-radius: 8px;">
+          [ Merchant QR Code ]
+        </div>
+        <p style="font-size: 0.8rem; margin-top: 8px; color: var(--accent-gold);">UPI ID: rizopay@merchantupi</p>
+        <p style="font-size: 0.8rem; color: var(--accent-red); margin-top: 4px;">Time Left: <span id="timer">10:00</span></p>
+      </div>
+
+      <input type="text" class="input-field" id="utrInput" placeholder="Enter 12-Digit UTR Number">
+      <button class="btn-primary" onclick="submitUTR()">Submit Payment</button>
+      <button style="width: 100%; padding: 8px; background: transparent; border: none; color: var(--text-sub); margin-top: 8px;" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item">🏠<span>Home</span></a>
+    <a href="orders.html" class="nav-item active">📈<span>Orders</span></a>
+    <a href="team.html" class="nav-item">👥<span>Team</span></a>
+    <a href="mine.html" class="nav-item">👤<span>Mine</span></a>
+  </nav>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
 
